@@ -3,11 +3,9 @@
 from Matrix import *
 from Vector import *
 
-m = Matrix(2,2,3,2,-2,1)
+m = Matrix(2,2,0,2,1,0)
 v = Vector(1,2)
 
-m.timesByVector(v)
-
-m.printMatrix()
+print(vectorByMatrix(m,v))
 
 ## LINEAR ALG VIDEO 4
