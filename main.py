@@ -3,9 +3,9 @@
 from Matrix import *
 from Vector import *
 
-m = Matrix(2,2,0,2,1,0)
+m = Matrix(3,3,1,2,3,4,5,6,7,8,9)
 v = Vector(1,2)
 
-print(vectorByMatrix(m,v))
+print(m.det3())
 
 ## LINEAR ALG VIDEO 4
