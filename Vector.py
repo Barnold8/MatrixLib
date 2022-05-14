@@ -62,6 +62,19 @@ def mulVectors(*vectors):
             v.vec[i] *= vec.vec[i]
             
     return v
+
+def dotProduct(*vectors): # assuming all vectors are of the same length
+    maxDIM = vectors[0].getDimensions()
+    x = [1]*maxDIM
+    for v in vectors:
+        if v.getDimensions() > maxDIM:
+            print("This function needs all vectors to be of the same size")
+            return
+    for i in range(len(vectors)):
+        for y in range(len(vectors[i].vec)):
+            x[y] *= vectors[i].vec[y]
+    return x
+    
 # Basic summation of vector functions
 
 
@@ -87,4 +100,5 @@ class Vector:
     def scalar(self,number):
         for i in range(len(self.vec)):
             self.vec[i] = self.vec[i] * number
+
 
